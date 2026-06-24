@@ -39,9 +39,9 @@ Use the docs URL when linking to related articles. Use the pricing URL for upgra
 |---|---|---|
 | CartFlows | https://cartflows.com/docs/ | https://cartflows.com/pricing/ |
 | SureCart | https://surecart.com/docs/ | https://surecart.com/pricing/ |
-| Modern Cart | Verify — may be under CartFlows docs | Verify |
-| Cart Abandonment Recovery | Verify — may be under CartFlows docs | Verify |
-| Power Coupons | Verify — may be under CartFlows docs | Verify |
+| Modern Cart | https://cartflows.com/docs/ | https://cartflows.com/pricing/ |
+| Cart Abandonment Recovery | https://cartflows.com/docs/ | https://cartflows.com/pricing/ |
+| Power Coupons | https://cartflows.com/docs/ | https://cartflows.com/pricing/ |
 
 ### Membership & Community
 | Product | Docs URL | Pricing URL |
