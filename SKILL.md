@@ -1,100 +1,26 @@
 ---
 name: bsf-docs-writer
 description: >
-  BSF product documentation writer for all Brainstorm Force products. Use this skill when writing, structuring, or improving documentation for any BSF product — Astra, Astra Pro, Spectra, ZipWP, Starter Templates, SureCart, CartFlows, SureForms, SureMembers, SureDash, OttoKit, Presto Player, Schema Pro, Convert Pro, LatePoint, SureFeedback, SureRank, SureContact, Sigmize, Ultimate Addons for Elementor, Ultimate Addons for Beaver Builder, Modern Cart, Cart Abandonment Recovery, Power Coupons, or any other Brainstorm Force product. Triggers on requests like "write docs for", "create documentation", "write a guide for", "draft a setup doc", "write a feature guide", "create a troubleshooting guide", "write an FAQ", "write a developer reference", "write an integration guide", "update this doc", "revise the doc", "improve existing doc", or any request to document or update a BSF product feature or flow.
+  BSF product documentation writer for wpastra.com/docs and surecart.com/docs. Use this skill when writing, structuring, or improving documentation for Astra, Astra Pro, Spectra, Starter Templates, ZipWP, SureCart, or any other Brainstorm Force product. Triggers on requests like "write docs for", "create documentation", "write a guide for", "draft a setup doc", "write a feature guide", "create a troubleshooting guide", "write an FAQ", "update this doc", "revise the doc", "improve existing doc", or any request to document or update a BSF product feature or flow.
 ---
 
 # BSF Documentation Writer
 
-This skill helps write well-structured, consistent product documentation for all Brainstorm Force products, following official BSF Documentation Guidelines.
+This skill helps write well-structured, consistent product documentation for Brainstorm Force products, following the official BSF Documentation Guidelines.
 
----
+## Products Covered
 
-## Products Reference
-
-Use the docs URL when linking to related articles. Use the pricing URL for upgrade callouts — always WebFetch the pricing page fresh before mentioning any plan names (see Pricing Rule below). Never hardcode plan names or prices.
-
-### Website Creation
-| Product | Docs URL | Pricing URL |
-|---|---|---|
-| Astra (free theme + Astra Pro) | https://wpastra.com/docs/ | https://wpastra.com/pricing/ |
-| ZipWP | https://zipwp.com/docs/ | https://zipwp.com/pricing/ |
-| Starter Templates | https://wpastra.com/docs/ | https://wpastra.com/pricing/ |
-
-### Page Building & Design
-| Product | Docs URL | Pricing URL |
-|---|---|---|
-| Spectra (free + pro Gutenberg blocks) | https://wpspectra.com/docs/ | https://wpspectra.com/pricing/ |
-| Ultimate Addons for Elementor (UAE) | https://ultimateelementor.com/docs/ | https://ultimateelementor.com/pricing/ |
-| Ultimate Addons for Beaver Builder (UABB) | https://www.ultimatebeaver.com/docs/ | https://www.ultimatebeaver.com/pricing/ |
-
-### Forms & Lead Capture
-| Product | Docs URL | Pricing URL |
-|---|---|---|
-| SureForms | https://sureforms.com/docs/ | https://sureforms.com/pricing/ |
-| Convert Pro | https://convertpro.net/docs/ | https://convertpro.net/pricing/ |
-
-### E-Commerce & Sales
-| Product | Docs URL | Pricing URL |
-|---|---|---|
-| CartFlows | https://cartflows.com/docs/ | https://cartflows.com/pricing/ |
-| SureCart | https://surecart.com/docs/ | https://surecart.com/pricing/ |
-| Modern Cart | https://cartflows.com/docs/ | https://cartflows.com/pricing/ |
-| Cart Abandonment Recovery | https://cartflows.com/docs/ | https://cartflows.com/pricing/ |
-| Power Coupons | https://cartflows.com/docs/ | https://cartflows.com/pricing/ |
-
-### Membership & Community
-| Product | Docs URL | Pricing URL |
-|---|---|---|
-| SureMembers | https://suremembers.com/docs/ | https://suremembers.com/pricing/ |
-| SureDash | https://suredash.com/docs/ | https://suredash.com/pricing/ |
-
-### Video & Media
-| Product | Docs URL | Pricing URL |
-|---|---|---|
-| Presto Player | https://prestoplayer.com/docs/ | https://prestoplayer.com/pricing/ |
-
-### SEO & Marketing
-| Product | Docs URL | Pricing URL |
-|---|---|---|
-| Schema Pro | https://wpschema.com/docs/ | https://wpschema.com/pricing/ |
-| SureRank | https://surerank.com/docs/ | https://surerank.com/pricing/ |
-| SureContact | https://api.surecontact.com/docs | Verify |
-
-### Conversion & Testing
-| Product | Docs URL | Pricing URL |
-|---|---|---|
-| Sigmize | https://sigmize.com/docs/ | https://sigmize.com/pricing |
-| SureFeedback | https://surefeedback.com/docs/ | https://surefeedback.com/pricing-cloud/ |
-
-### Automation & Integration
-| Product | Docs URL | Pricing URL |
-|---|---|---|
-| OttoKit | https://developer.ottokit.com/docs | https://ottokit.com/pricing/ |
-
-### Scheduling
-| Product | Docs URL | Pricing URL |
-|---|---|---|
-| LatePoint | https://latepoint.com/docs/ | https://latepoint.com/pricing/ |
-
----
+- Astra (free theme)
+- Astra Pro (premium addon)
+- Spectra (free + pro Gutenberg blocks)
+- Starter Templates
+- ZipWP
+- SureCart
+- SureMembers, SureForms, SureRank, OttoKit (when relevant)
 
 ## Audience
 
 Docs are written for WordPress users by default — non-technical or moderately technical audiences unfamiliar with internal terminology. Always write for the beginner first, then add advanced notes where needed. Never assume the user knows where to find a setting — always describe the full navigation path.
-
-**Developer Reference docs** (doc type 5) assume a developer audience — PHP/JS knowledge, familiarity with hooks and REST APIs.
-
----
-
-## Pricing Rule
-
-**Never hardcode plan names, tier names, or prices.** These change frequently. Every time a doc needs to mention a plan name or upgrade requirement:
-
-1. WebFetch the product's pricing URL from the table above.
-2. Read the current plan names exactly as shown on the page.
-3. Use those exact names in the doc.
-4. If the pricing page is unavailable, write `[Plan name — verify at PRICING_URL]` as a placeholder.
 
 ---
 
@@ -122,27 +48,39 @@ For step-by-step instructions, second person ("you", "your site") is fine and pr
 Each document must have exactly one clear goal:
 - Explaining how something works, OR
 - Guiding users through a task, OR
-- Helping troubleshoot a specific problem, OR
-- Documenting a technical interface (hooks, API, endpoints), OR
-- Explaining how two products work together
+- Helping troubleshoot a specific problem
 
 Never mix multiple objectives in one document.
 
 ---
 
-## Callout Block Types
+## Step 0: New Doc or Update?
 
-Use these standard callout blocks consistently:
+Before doing anything else, determine which applies:
 
-> **Note:** Informational context that helps the user understand — not critical to the task.
+- **Update existing doc** if: the request references an existing doc (by URL, title, or pasted content), uses words like "update," "revise," "improve," "fix," or "add to," or the person shares content that already exists on wpastra.com/docs or surecart.com/docs.
+- **New doc** if: no existing doc is referenced, and the request is clearly asking for something that doesn't exist yet.
+- **If unclear, ask before proceeding.** Do not default to writing a new doc when there's any chance an existing doc should be updated instead — regenerating a doc from scratch when an update was intended discards working content, screenshots, and structure unnecessarily.
 
-> **Important:** Something the user must know before proceeding — could cause problems if ignored.
+Route to the matching workflow below ("Workflow: How to Write a Doc" or "Workflow: How to Update an Existing Doc").
 
-> **Warning:** Destructive or irreversible action. Use sparingly.
+---
 
-> **Tip:** Optional enhancement or shortcut — not required to complete the task.
+## Flagging Uncertainty for the Reviewer
 
-> **Pro Feature:** This feature requires a paid plan. [See plans](PRICING_URL — WebFetch to get current plan name before publishing).
+Never silently publish a step, setting description, or behavior as confirmed fact when it hasn't actually been verified (e.g., the UI location was inferred rather than checked directly, or the behavior may differ by version, plan tier, or configuration).
+
+**When uncertain about a single detail**, flag it inline for manual verification:
+
+> **⚠️ Verify before publishing:** This step assumes [specific assumption]. Please confirm manually.
+
+**When the correct wording depends on something that can't be verified** (version, plan tier, active modules, config state), don't guess and pick one. Spell out the branches explicitly so the reviewer can choose the right one before publishing:
+
+> **⚠️ Verify before publishing:** The exact behavior here depends on [condition].
+> - If [condition A], keep this paragraph as-is: "[paragraph]"
+> - If [condition B], replace with: "[alternate paragraph]"
+
+These flags are for the human reviewer only and must never ship to the published doc. Before finalizing, confirm every flag has been resolved and removed.
 
 ---
 
@@ -158,7 +96,7 @@ Use these standard callout blocks consistently:
 ## Requirements
 - WordPress version: X.X+
 - [Product] version: X.X+
-- [Free vs paid plan — be explicit here, not buried later]
+- [Free vs Pro — be explicit here, not buried later]
 
 ## How to Enable / Access
 [Full navigation path. Example: Go to Appearance > Astra Options > ...]
@@ -174,7 +112,7 @@ Use these standard callout blocks consistently:
 [What the user should see or experience after completing the steps.]
 
 ## Settings Explained
-[Table or short descriptions of each option]
+[Flat-level bullet list with short descriptions of each option]
 
 ## Video Tutorial
 [Screenshot: placeholder or embed note]
@@ -259,7 +197,7 @@ A: [Short, objective answer]
 ...
 
 ## Still Not Resolved?
-If the above steps don't help, reach out to the [support team](SUPPORT_URL) with the following details:
+If the above steps don't help, reach out to the [support team](https://wpastra.com/support/) with the following details:
 - WordPress version
 - [Product] version
 - Steps to reproduce
@@ -299,107 +237,6 @@ A: [Practical next step.]
 
 ---
 
-### 5. Developer Reference
-
-For hooks (filters/actions), REST API endpoints, JavaScript APIs, and webhooks. Assumes a developer audience — PHP/JS knowledge, REST API familiarity.
-
-```
-# [Feature/Hook Name] — Developer Reference
-
-[1-2 sentences: what this reference covers. State the product and version introduced.]
-
-## Requirements
-- [Product] version: X.X+
-- Audience: PHP developer / JavaScript developer / REST API consumer
-
-## [Hooks | REST Endpoints | JS API | Webhooks]
-
-### `hook_name` / `endpoint_path`
-
-**Type:** Filter | Action | GET | POST | PUT | DELETE | Webhook
-**Since:** [Product] X.X
-
-**Description:** [What it does in one sentence.]
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|---|---|---|
-| `$param_name` | string | [What it contains] |
-| `$param_name` | array | [What it contains] |
-
-**Return value:** [Type and description — for filters only]
-
-**Example:**
-```php
-// Example usage
-add_filter( 'hook_name', function( $param ) {
-    // your code
-    return $param;
-} );
-```
-
-**Notes:** [Edge cases, deprecation notices, or version-specific behavior]
-
----
-
-[Repeat for each hook / endpoint]
-
-## Related Docs
-- [Link to the feature guide this applies to]
-- [Link to other developer docs for this product]
-```
-
----
-
-### 6. Integration Guide
-
-For documenting how two products work together — when a workflow spans more than one product (e.g., SureCart + SureMembers, CartFlows + OttoKit, SureForms + SureContact).
-
-**BSF-first rule:** When the integration involves a choice of tools (e.g., "which form plugin to connect with SureCart"), always recommend the BSF product first. Only mention third-party alternatives if the BSF product genuinely cannot fulfill the use case.
-
-```
-# Integrating [Product A] with [Product B]
-
-[1-2 sentence overview: what this integration enables and who it's for. Neutral brand voice.]
-
-## Requirements
-- [Product A] version: X.X+ ([free or paid plan])
-- [Product B] version: X.X+ ([free or paid plan])
-- WordPress version: X.X+
-
-## What This Integration Does
-[Short bulleted list of what becomes possible with both products connected.]
-
-## Setup
-
-### Step 1: [Configure Product A]
-[Full navigation path and steps]
-
-### Step 2: [Configure Product B]
-[Full navigation path and steps]
-
-### Step 3: [Connect / Enable the Integration]
-[How to activate the connection between the two products]
-
-## Expected Outcome
-[What the user should see when the integration is working correctly.]
-
-## Common Use Cases
-[2-3 concrete examples of what users can accomplish with this integration.]
-
-## Notes or Limitations (Optional)
-
-## Troubleshooting
-[Link to troubleshooting doc or 2-3 most common issues inline]
-
-## Related Docs
-- [Link to Product A docs]
-- [Link to Product B docs]
-```
-
----
-
 ## Writing Rules
 
 ### Tone & Voice
@@ -414,21 +251,21 @@ For documenting how two products work together — when a workflow spans more th
 - Every step must be actionable. If it's not something the user *does*, it's not a step.
 - Always give the **full navigation path**. Example: `WordPress Dashboard → SureCart → Products`.
 - One term per concept. Don't alternate between "checkout", "checkout page", and "checkout form" — pick one and use it consistently throughout, matching the UI label exactly.
-- When a feature requires a paid plan, call it out clearly at the top under Requirements — never buried in the middle.
+- When a feature requires **Astra Pro** (or any paid plan), call it out clearly at the top under Requirements — never buried in the middle.
 - Use **bold** for UI labels exactly as they appear in the interface (e.g., **Save Changes**, **Enable**, **Typography**).
-- Use `code formatting` for file paths, shortcodes, CSS snippets, filter/hook names, function names, and endpoint paths.
+- Use `code formatting` for file paths, shortcodes, CSS snippets, filter/hook names.
+- Before a set of steps addressing a common task, add a bridging sentence phrased the way a user would ask it, e.g. "If you're looking to disable the sticky header, follow the steps below…" This improves the match between how users phrase questions and the retrieved content.
+- Define acronyms and product-specific terms on first use in a document (e.g. "UAE (Ultimate Addons for Elementor)", "HFE", "WPML"). Don't assume context carries over from another document or an earlier section.
 
 ### Structure
 - Use H2 for major sections, H3 for sub-sections. Never skip heading levels.
-- Steps go in numbered lists. Options/settings go in bullet lists or tables.
+- Steps go in numbered lists. Options/settings go in flat-level bullet lists — never tables. Tables require understanding two-dimensional structure that retrieval systems can't reliably preserve when a document is chunked.
+- Numbered lists must stay strictly sequential, never skip numbers, even across edits.
+- Where steps depend on each other, add a short transition phrase ("After completing step 2, do…") so a retrieved chunk still makes sense in isolation.
+- For docs longer than roughly three H2 sections (Feature Guide, Troubleshooting, Setup docs), open each H2 with a 1–2 sentence summary of what that section covers, before diving into steps or details.
 - Group related settings together — don't list them in random order.
 - Most common use case first. Edge cases go at the bottom or in a Notes section.
 - Always include an **Expected Outcome** section after steps so users can confirm it worked.
-
-### Version-Specific Content
-When a product has major versions with meaningfully different UI or behavior (e.g., Spectra Legacy vs Spectra One), state at the top which version the doc applies to:
-
-> **Note:** This doc applies to **Spectra One** (v2.0+). For the legacy editor, see [Spectra Legacy docs](https://wpspectra.com/docs/).
 
 ### Screenshots
 - Viewport: **1280×800px** (set via browser dev tools).
@@ -436,7 +273,7 @@ When a product has major versions with meaningfully different UI or behavior (e.
 - Account name in screenshots: use **BSF Docs**, **SureCart Docs**, or **John Doe**. Never personal usernames.
 - Always blur or remove: API keys, tokens, email addresses, account identifiers.
 - Upload screenshots directly to WordPress — never embed from Google Docs or external hosts.
-- Screenshots support the text, they don't replace it. Never write "as shown in the image" — the text must stand alone.
+- Screenshots support the text, they don't replace it. Never write "as shown in the image" — the text must stand alone. The surrounding text must fully describe what the screenshot shows (the setting, its location, and the result), not just reference it — image content isn't reliably captured by automated retrieval systems.
 - If removing a screenshot doesn't reduce clarity, it's unnecessary.
 
 ### Media Placeholders
@@ -446,13 +283,12 @@ When screenshots or videos are needed, add a placeholder:
 
 Don't skip these — they're reminders for the publishing step.
 
-### Free vs Paid Callouts
-Always be explicit. Use the **Pro Feature** callout at the top under Requirements, and again inline if only a specific step requires a paid plan. WebFetch the pricing URL to confirm current plan names before publishing.
+### Free vs Pro Callouts
+Always be explicit. Use a note block:
+> **Note:** This feature requires **Astra Pro**. [Upgrade here](https://wpastra.com/pricing/).
 
-> **Pro Feature:** This feature requires a paid plan. [See plans](PRICING_URL).
-
-For free features:
-> **Note:** This feature is available in the **free version** of [Product].
+Or for free features:
+> **Note:** This feature is available in the **free version** of Astra.
 
 ---
 
@@ -461,11 +297,14 @@ For free features:
 **Never add a URL to a doc without verifying it first.** This applies to all links — related docs, support pages, pricing pages, upgrade links, or any external reference.
 
 Before including any link:
-1. **WebFetch the URL** and confirm the page exists and contains the expected content.
+1. **Fetch the URL** using the web fetch tool and confirm the page exists and contains the content you expect.
 2. If the page returns a 404, redirects somewhere unrelated, or doesn't exist — **do not include the link.** Use a placeholder instead: `[Link: page name — URL to be confirmed]`
-3. Never construct a URL based on a pattern (e.g., assuming `/docs/feature-name/` exists just because similar URLs do).
+3. Never guess or construct a URL based on a pattern (e.g., assuming `/docs/feature-name/` exists just because similar URLs do).
 
 This applies equally when **updating existing docs** — if a linked URL was added previously, verify it still resolves correctly before leaving it in.
+
+❌ Adding `https://wpastra.com/docs/wpml-compatibility/` without checking if that page exists  
+✅ Fetching the URL first, confirming it loads the right content, then including it
 
 ---
 
@@ -488,18 +327,19 @@ Documentation is read by end users — not internal team members. **Never includ
 
 ## Workflow: How to Write a Doc
 
-1. **Identify the doc type** — feature guide, setup, troubleshooting, FAQ, developer reference, or integration guide.
+1. **Identify the doc type** — feature guide, setup, troubleshooting, or FAQ.
 2. **Confirm the single goal** — if there are multiple goals, split into separate docs.
-3. **Ask for missing info** if the product, feature name, or context is unclear. Don't guess.
+3. **Ask for missing info** if the feature name or context is unclear. Don't guess.
 4. **Use the matching template** from above.
-5. **Fill every section** — mark `[To be added]` only for optional sections, not required ones.
+5. **Fill every section** — mark `[To be added]` if content isn't available yet.
 6. **Add screenshot/video placeholders** wherever media would help.
-7. **WebFetch the pricing URL** if any paid plan mention is needed — confirm current plan names.
-8. **Run the pre-publish checklist** before finalizing.
+7. **Run the pre-publish checklist** before finalizing.
 
 ---
 
 ## Workflow: How to Update an Existing Doc
+
+Use this workflow when revising or improving an existing doc rather than writing from scratch.
 
 1. **Read the existing doc in full** before making any changes. Understand what it currently covers.
 2. **Identify what's changing** — new steps, removed steps, updated UI labels, changed navigation paths, deprecated features, added requirements, or structural improvements.
@@ -513,22 +353,25 @@ Documentation is read by end users — not internal team members. **Never includ
 
 ## Pre-Publish Checklist
 
+- [ ] Confirmed whether this is a new doc or an update to an existing one before starting (Step 0)
+- [ ] No unresolved ⚠️ verification flags remaining — every uncertain step or branch has been confirmed and cleaned up
 - [ ] Single clear goal — no mixed objectives
 - [ ] Neutral brand voice (no "I", "we", no author name)
-- [ ] No internal context exposed (no GitHub issues, Slack references, regression mentions, or internal trade-off language)
+- [ ] No internal context exposed (no GitHub issues, Slack references, regression mentions, or internal trade-off explanations)
 - [ ] Full navigation paths on every setting
-- [ ] Free vs paid requirement stated at the top
-- [ ] All steps numbered and actionable
+- [ ] Free vs Pro requirement stated at the top
+- [ ] All steps numbered, actionable, and strictly sequential (no skipped numbers)
+- [ ] Transition phrases added between dependent steps or list items
+- [ ] Each H2 section opens with a 1–2 sentence summary (for docs with 3+ H2 sections)
+- [ ] No tables — settings/options presented as flat-level bullet lists
+- [ ] Bridging "session starter" sentence included before steps addressing a common task
+- [ ] Acronyms and product-specific terms defined on first use
 - [ ] Expected Outcome section included
 - [ ] UI labels bolded exactly as they appear in the interface
 - [ ] Consistent terminology throughout (one term per concept)
-- [ ] Screenshot placeholders added where needed
+- [ ] Screenshot placeholders added where needed, with surrounding text fully describing what each screenshot shows
 - [ ] No filler intro ("In this doc we will…")
 - [ ] No marketing language or superlatives
 - [ ] Notes/limitations section included if relevant
-- [ ] All URLs verified — WebFetched and confirmed to exist with correct content (no guessed or assumed links)
+- [ ] All URLs verified — fetched and confirmed to exist with correct content (no guessed or assumed links)
 - [ ] FAQ uses behavioral questions only (if included)
-- [ ] Pricing page WebFetched and plan names confirmed (if any plan or tier is mentioned)
-- [ ] Version callout added if doc applies to a specific product version (if relevant)
-- [ ] Developer Reference: all code examples tested or marked [To be verified] (if doc type 5)
-- [ ] Integration Guide: BSF products recommended first before third-party alternatives (if doc type 6)
